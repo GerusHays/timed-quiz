@@ -7,7 +7,7 @@ var timeLimitId;
 var timeLimitEl = document.getElementById("time-limit");
 var questionsEl = document.getElementById("questions");
 var optionsEl = document.getElementById("options");
-var nameEl = document.getElementById("name");
+var initialsEl = document.getElementById("initials");
 var criticismEl = document.getElementById("criticism");
 var beginBtn = document.getElementById("begin");
 var submitBtn = document.getElementById("submit");
@@ -17,14 +17,14 @@ var soundCorrect = new Audio
 var soundIncorrect = new Audio
 
 function beginQuiz() {
-    var beginningEl = document.getElementById("beginning0");
-    beginningEl.setAttribute("class", "hidden");
+    var beginningEl = document.getElementById("beginning");
+    beginningEl.setAttribute("class", "vanish");
 
     questionsEl.removeAttribute("class");
 
-    timeLimitId = setInterval(clockTick, 1000);
+    // timeLimitId = setInterval(clockTick, 1000);
 
-    timeLimitEl.textContent = time;
+    // timeLimitEl.textContent = time;
 
     getQuestion();
 };
@@ -39,7 +39,7 @@ function getQuestion() {
 
     activeQuestion.options.forEach(function(option, i) {
         var optionNode = document.createElement("button");
-        optionNode.setAttribute("class", "option");
+        optionNode.setAttribute("class", "options");
         optionNode.setAttribute("value", option);
         optionNode.textContent = i + 1 + ". " + option;
 
@@ -66,9 +66,19 @@ function questionInteraction() {
 }
 
 // function to end the quiz
+function stopQuiz() {
+
+}
 
 // function for the timer to countdown
+function timeDown() {
+
+}
 
 // function to save the high scores
+function saveScores() {
 
-// function to save name? 
+}
+
+// function to save initials? 
+beginBtn.onclick = beginQuiz;

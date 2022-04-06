@@ -14,7 +14,7 @@
     <div class="time-limit">Time: <span id="time-limit">0</span></div>
 
     <main class="main">
-        <section id="beginning" class="start">
+        <section id="beginning" class="start" style="display:inline">
             <h1>JavaScript Timed Quiz</h1>
             <p>
                 You will be answering the following questiosn related to JavaScript code within the time-limit.
@@ -28,11 +28,11 @@
             <div id="options" class="options"></div>
         </section>
 
-        <section id="end" class="hidden">
+        <section id="stop" class="hidden">
             <h2>CONGRATS YOU FINISHED!</h2>
             <p>Your final score is <span id="final-score"></span></p>
             <p>
-                Enter your First Name to track where you are are in the leaderboard: <input type="text" id="name" max="5" />
+                Enter your First and Last initial to track where you are are in the leaderboard: <input type="text" id="initials" max="5" />
                 <button id="submit">Submit</button>
             </p>
         </section>

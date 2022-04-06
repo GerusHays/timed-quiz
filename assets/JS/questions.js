@@ -1,27 +1,27 @@
 var questions = [
     {
         title: "Placeholder",
-        choices: ["placeholder",],
+        options: ["placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        choices: ["placeholder",],
+        options: ["placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        choices: ["placeholder",],
+        options: ["placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        choices: ["placeholder",],
+        options: ["placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        choices: ["placeholder",],
+        options: ["placeholder",],
         answer: "Placeholder",
     },
 ];
