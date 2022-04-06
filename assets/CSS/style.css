@@ -1,12 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-};
+:root {
+    --text-color: white;
+    --button-color: Blue;
+    --hover-color: Aqua;
+}
 
 body {
-    height: 100%;
-};
+    font-family: Arial;
+    font-size: 120%;
+}
+
+a {
+    color: var(--button-color);
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    padding: 2px 10px;
+    color: var(--text-color);
+    border: 0;
+    transition: background-color 0.1s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.options button {
+    display: block;
+}
 
 .vanish {
-    visibility: hidden;
-};
+    display: none;
+}
+

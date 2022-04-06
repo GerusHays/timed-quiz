@@ -1,6 +1,6 @@
 // the following keeps track of the status of the quiz
 var currentQuestionBank = 0;
-var time = questions.length * 15;
+var time =  100 ;
 var timeLimitId;
 
 // variables connecting to html DOM elements
@@ -22,9 +22,9 @@ function beginQuiz() {
 
     questionsEl.removeAttribute("class");
 
-    // timeLimitId = setInterval(clockTick, 1000);
+    timeLimitId = setInterval(timeDown, 1000);
 
-    // timeLimitEl.textContent = time;
+    timeLimitEl.textContent = time;
 
     getQuestion();
 };
@@ -72,8 +72,10 @@ function stopQuiz() {
 
 // function for the timer to countdown
 function timeDown() {
-
-}
+    time--;
+    timeLimitEl.textContent = time;
+    console.log(typeof time);
+};
 
 // function to save the high scores
 function saveScores() {
@@ -81,4 +83,6 @@ function saveScores() {
 }
 
 // function to save initials? 
+
+
 beginBtn.onclick = beginQuiz;
