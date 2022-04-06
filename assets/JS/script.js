@@ -37,7 +37,38 @@ function getQuestion() {
 
     optionsEl.innerHTML = "";
 
-    activeQuestion.options.forEach(function(choice, i) {
+    activeQuestion.options.forEach(function(option, i) {
+        var optionNode = document.createElement("button");
+        optionNode.setAttribute("class", "option");
+        optionNode.setAttribute("value", option);
+        optionNode.textContent = i + 1 + ". " + option;
 
+        optionNode.onclick = questionInteraction();
+        optionsEl.appendChild(optionNode);
     });
 }
+
+function questionInteraction() {
+    // upon interacting with the question i want to...
+    // check if user guessed wrong..
+
+    // reduce time 
+
+    // show the time on page 
+
+    // play sound effect for incorrect answers
+
+    // play sound effect for correct answers
+
+    // move to next question
+
+    // check for if there are more questions or add a remaining question function?
+}
+
+// function to end the quiz
+
+// function for the timer to countdown
+
+// function to save the high scores
+
+// function to save name? 
