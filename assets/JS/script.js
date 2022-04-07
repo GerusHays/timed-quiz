@@ -18,7 +18,7 @@ var soundIncorrect = new Audio
 
 function beginQuiz() {
     var beginningEl = document.getElementById("beginning");
-    beginningEl.setAttribute("class", "vanish");
+    beginningEl.setAttribute("class", "hidden");
 
     questionsEl.removeAttribute("class");
 
