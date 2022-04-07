@@ -13,8 +13,8 @@ var beginBtn = document.getElementById("begin");
 var submitBtn = document.getElementById("submit");
 
 // sounds for right and wrong answers
-var soundCorrect = new Audio
-var soundIncorrect = new Audio
+// var soundCorrect = new Audio
+// var soundIncorrect = new Audio
 
 function beginQuiz() {
     var beginningEl = document.getElementById("beginning");
@@ -60,18 +60,18 @@ function questionInteraction() {
         // show the time on page
         timeLimitEl.textContent = time;
         // play sound effect for incorrect answers
-        soundIncorrect.play();
+        // soundIncorrect.play();
         criticismEl.textContent = "Incorrect!";
     } else {
         // play sound effect for correct answers
-        soundIncorrect.play();
+        // soundCorrect.play();
         criticismEl.textContent = "Correct!";
     }
     // show right/wrong ciriticism on page briefly
     criticismEl.setAttribute("class", "criticism");
     setTimeout(function() {
-        criticismEl.setAttribute("class", "criticism hide");
-    }, 500);
+        criticismEl.setAttribute("class", "criticism hidden");
+    }, 1000);
     
     // move to next question
     currentQuestionBank++;
@@ -86,7 +86,7 @@ function questionInteraction() {
 // function to end the quiz
 function stopQuiz() {
     // upon the quiz stopping ensure the timer stops
-    clearInterval(timerId);
+    clearInterval(timeLimitId);
 
     // display the end screen and congragulate user on finishing quiz
     var stopEL = document.getElementById("stop");
@@ -119,5 +119,5 @@ function saveScores() {
 
 // function to save initials? 
 
-
+// user clicks the begin quiz button to begin the quiz
 beginBtn.onclick = beginQuiz;
