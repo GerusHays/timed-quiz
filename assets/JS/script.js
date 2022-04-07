@@ -85,7 +85,19 @@ function questionInteraction() {
 
 // function to end the quiz
 function stopQuiz() {
+    // upon the quiz stopping ensure the timer stops
+    clearInterval(timerId);
 
+    // display the end screen and congragulate user on finishing quiz
+    var stopEL = document.getElementById("stop");
+    stopEL.removeAttribute("class");
+
+    // display final score to user
+    var finalScoreEl = document.getElementById("final-score");
+    finalScoreEl.textContent = time;
+
+    // hide the questions section once quiz stops 
+    questionsEl.setAttribute("class", "hidden");
 }
 
 // function for the timer to countdown
@@ -97,7 +109,7 @@ function timeDown() {
     if (time <= 0) {
         stopQuiz();
     }
-    console.log(typeof time);
+    // console.log(typeof time);
 };
 
 // function to save the high scores

@@ -5,7 +5,7 @@ function showHighscores() {
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 // this will sort the high scores property in the correct order high to low as intended for highscores to display
     highscores.sort(function(a,b) {
-        return b.score -a.score;
+        return b.score - a.score;
     });
 
     highscores.forEach(function(score) {
