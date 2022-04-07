@@ -51,18 +51,36 @@ function getQuestion() {
 function questionInteraction() {
     // upon interacting with the question i want to...
     // check if user guessed wrong..
-
-    // reduce time 
-
-    // show the time on page 
-
-    // play sound effect for incorrect answers
-
-    // play sound effect for correct answers
-
+    if (this.value !== questions[currentQuestionBank].answer) {
+        // reduce time 
+        time -= 10;
+        if (time < 0) {
+            time = 0;
+        }
+        // show the time on page
+        timeLimitEl.textContent = time;
+        // play sound effect for incorrect answers
+        soundIncorrect.play();
+        criticismEl.textContent = "Incorrect!";
+    } else {
+        // play sound effect for correct answers
+        soundIncorrect.play();
+        criticismEl.textContent = "Correct!";
+    }
+    // show right/wrong ciriticism on page briefly
+    criticismEl.setAttribute("class", "criticism");
+    setTimeout(function() {
+        criticismEl.setAttribute("class", "criticism hide");
+    }, 500);
+    
     // move to next question
-
+    currentQuestionBank++;
     // check for if there are more questions or add a remaining question function?
+    if (currentQuestionBank === questions.length) {
+        stopQuiz();
+    } else {
+        getQuestion();
+    }
 }
 
 // function to end the quiz
@@ -72,8 +90,13 @@ function stopQuiz() {
 
 // function for the timer to countdown
 function timeDown() {
+    // actually countsdown subtracting by 1 second 
     time--;
     timeLimitEl.textContent = time;
+    // if user runs out of time stop the quiz
+    if (time <= 0) {
+        stopQuiz();
+    }
     console.log(typeof time);
 };
 

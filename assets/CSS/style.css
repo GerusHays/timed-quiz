@@ -49,7 +49,7 @@ ol {
 
 li {
     padding: 3px;
-    list-style: decimal inside none;
+    list-style: square inside none;
 }
 
 li:nth-child(odd) {
