@@ -87,5 +87,5 @@ li:nth-child(odd) {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 5px solid black;
-    color: var(--text-color);
+    color: black;
 }

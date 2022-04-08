@@ -43,7 +43,7 @@ function getQuestion() {
         optionNode.setAttribute("value", option);
         optionNode.textContent = i + 1 + ". " + option;
 
-        optionNode.onclick = questionInteraction();
+        optionNode.onclick = questionInteraction;
         optionsEl.appendChild(optionNode);
     });
 }

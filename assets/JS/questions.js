@@ -3,27 +3,27 @@
 var questions = [
     {
         title: "Placeholder",
-        options: ["placeholder",],
+        options: ["Placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        options: ["placeholder",],
+        options: ["Placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        options: ["placeholder",],
+        options: ["Placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        options: ["placeholder",],
+        options: ["Placeholder",],
         answer: "Placeholder",
     },
     {
         title: "Placeholder",
-        options: ["placeholder",],
+        options: ["Placeholder",],
         answer: "Placeholder",
     },
 ];
