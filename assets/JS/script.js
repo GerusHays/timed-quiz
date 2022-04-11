@@ -15,28 +15,29 @@ var submitBtn = document.getElementById("submit");
 // sounds for right and wrong answers
 // var soundCorrect = new Audio
 // var soundIncorrect = new Audio
-
+// function to beging the quit 
 function beginQuiz() {
     var beginningEl = document.getElementById("beginning");
     beginningEl.setAttribute("class", "hidden");
-
+    // remove the hidden element upon beginning the quiz to show questions
     questionsEl.removeAttribute("class");
-
+    // set countdown to go down by a second
     timeLimitId = setInterval(timeDown, 1000);
-
+    // display the countdown
     timeLimitEl.textContent = time;
-
+    // start the get question funciton
     getQuestion();
 };
-
+// function to get the question and cycle through
 function getQuestion() {
+    // gets questions from the current question bank
     var activeQuestion = questions[currentQuestionBank];
-
+    // pulls the div element of question head to display the head in the question function
     var headEl = document.getElementById("question-head");
     headEl.textContent = activeQuestion.head;
 
     optionsEl.innerHTML = "";
-
+    // added a button to each multiple choice option for the user to select
     activeQuestion.options.forEach(function(option, i) {
         var optionNode = document.createElement("button");
         optionNode.setAttribute("class", "options");
