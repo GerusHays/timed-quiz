@@ -115,10 +115,29 @@ function timeDown() {
 
 // function to save the high scores
 function saveScores() {
+    // set users initials and trim value to get rid of white space
+    var initials = initialsEl.value.trim();
+
+    // ensuring values are not empty
+    if (initials !== "") {
+        // display previous high scores or if there are none yet itll go to an empty array
+        var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+        // show user score and names based on scores.js file
+        var newScore = {
+            score: time,
+            name: initials
+        };
+        // save the new highscore to localStorage
+        highscores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+        // lastly send user to the highscores page to display their new highscore
+        window.location.href = "highscores.html";
+    }
 
 }
 
 // function to save initials? 
+submitBtn.onclick = saveScores;
 
 // user clicks the begin quiz button to begin the quiz
 beginBtn.onclick = beginQuiz;
