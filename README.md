@@ -1,11 +1,12 @@
 # Javascript timed Quiz
 ## Purpose
-The purpose of this webpage is to create a timed quiz and whenever the user gets a wrong answer it will deduct 10 seconds from the time limit. </br>
-Users have the option to select the length of their password and whether or not to include: Uppercase or Lowercase letters, numbers and special characters. </br>
-If the user inputs a number less than 8 or greater than 128 it will do nothing and they will have to click the generate button once more to select a number between the given length. </br>
-Once the user selects a length they will have 4 windows populate to confirm what characters they would like to include in their password.</br>
-If they confirm all 4 windows their password will include all 4 types of characters. </br>
-However, if they confirm 2 and cancel 2 the password will only include what characters they have confirmed that will populate in the text box. </br>
+The purpose of this webpage is to create a timed five question quiz on Javascript knowledge. </br>
+Users will have a total of 100 seconds to complete the quiz. Each time they miss a question the user will lose 10 seconds and 10 points will be deducted from their final score. </br>
+Upon clicking "Start Quiz" the users first question will appear to choose from 4 multiple choice options. </br>
+Whether the user selects an incorrect or correct answer it will display accordingly at the bottom of the quiz window.</br>
+Once completing the quiz or the timer hits zero the quiz will stop running and the highscore will then be displayed. </br>
+When the highscore displays the user can enter their initials and it will take them to the highscreen window to show how their peers did with the quiz. </br>
+They may also clear the highscores and go back to try another attempt at the quiz if they like.
 
 ## Built With
 * HTML
